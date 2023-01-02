@@ -1,0 +1,5 @@
+@media (max-height: 590px) {
+    #canvas{
+        margin-bottom: -30%;
+    }
+}

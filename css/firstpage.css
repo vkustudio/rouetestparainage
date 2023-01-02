@@ -1,0 +1,389 @@
+
+.imgLogoHeader{
+	margin-top: 3%;
+    width: 60%;
+    height: auto;
+}
+.textP{
+  text-align: center;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 30px;
+}
+
+.subtextp{
+  text-align: center;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 25px;
+}
+.QrCodePc{
+  border-radius: 30px;
+  width: 35%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+table{
+	position: fixed;
+	border-color: transparent;
+	border-style: none;
+	border: none;
+	display: table;
+	border: 1px solid transparent;
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid transparent;
+	}
+tr{
+	border: 1px solid transparent;
+}
+
+.imgCadeau{
+	margin-top: 3%;
+	width: 100%;
+	height: auto;
+}
+.imgBegin1{
+	margin-top: -5%;
+	width: 65%;
+	height: auto;
+
+}
+.imgBravoHeader{
+  margin-top: 0%;
+  width: 100%;
+  height: auto;
+}
+.imgDonut{
+	margin-bottom: 10%;
+	padding-top: 5%;
+}
+.imgCode{
+	margin-bottom: 2%;
+  width: 90%;
+  height: auto;
+}
+.imgMessage{
+  width: 100%;
+}
+.imgRejoue{
+  width: 70%;
+  height: auto;
+}
+.buttonSubmit{
+  background-color: transparent;
+  border: none;
+  margin-top: 3%;
+  width: 90%;
+  height: auto;
+}
+
+#submitButt{
+  background-color: #82B440;
+  width: 60%;
+  border: none;
+  border-radius: 30px;
+}
+
+
+
+#ComputerUsers{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(10%);
+}
+
+
+
+
+
+
+
+#MobileUsers{
+	display: contents;
+}
+#ComputerUsers{
+	display: block;
+}
+@media (max-width: 768px){
+	#MobileUsers{
+		display: contents;
+	}
+	#ComputerUsers{
+		display: none;
+	}
+}
+@media (min-width: 769px){
+	#MobileUsers{
+		display: none;
+	}
+	#ComputerUsers{
+		display: block;
+	}
+}
+
+/*---------------------------*/
+
+#instagramIMG{
+	margin-top: 4%;
+	width: 100%;
+}
+#googleIMG{
+  margin-top: 4%;
+  width: 20%;
+}
+#facebookIMG{
+  margin-top: 4%;
+  width: 20%;
+}
+
+
+.box {
+  width: 70%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+#popupBravo{
+    margin: 15% auto;
+}
+.popup {
+  margin: 35% auto;
+  padding: 20px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  background: #fff;
+  border-radius: 5px;
+  width: 70%;
+  height: 70%;
+  overflow: auto;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Montserrat, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 10ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #c91e4c;
+}
+.popup .content {
+  max-height: 70%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 90%;
+  }
+  .popup{
+    width: 90%;
+  }
+}
+.popupInst{
+  margin: 35% auto;
+  padding: 25px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  background: #fff;
+  border-radius: 5px;
+  width: 70%;
+  height: auto;
+  overflow: auto;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popupInst h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Montserrat, sans-serif;
+}
+.popupInst .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 10ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popupInst .close:hover {
+  color: #c91e4c;
+}
+.popupInst .content {
+  max-height: 70%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 90%;
+  }
+  .popupInst{
+    width: 90%;
+  }
+}
+
+/*-------------------------CLICKABLE ANIMATIONS-----------------------------------*/
+
+
+
+
+
+
+
+
+/*-------------------------OPENING ANIMATIONS----------------------------------*/
+
+.animated{
+
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.delay-08s{
+  animation-delay: 0.8s;
+}
+.delay-1-6s{
+  animation-delay: 1.6s;
+}
+
+
+/*FADE ANIMATION*/
+.fade{
+    -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-name: fade;
+  animation-name: fade;
+}
+
+@keyframes fade{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn{
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn{
+  0% {opacity: 0;
+      padding-top: 50px;}
+  100% {opacity: 1;
+      padding-top: 0px;}
+}
+
+
+
+
+
+
+
+
+/*ZOOM ANIMATION*/
+.zoomIn{
+  -webkit-transition: transform .2s;
+  transition: transform .2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  overflow: hidden;
+    -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+@keyframes zoomIn{
+  0% {transform: scale(0.5);
+      opacity: 0;}
+  75% {transform: scale(1.2);}
+
+  100% {transform: scale(1.0);
+      opacity: 1;}
+}
+.zoomInBravo{
+  -webkit-transition: transform .2s;
+  transition: transform .2s;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+    -webkit-animation-name: zoomBravo;
+  animation-name: zoomInBravo;
+}
+@keyframes zoomInBravo{
+  0% {padding-top: 70%;
+    transform: scale(0.5);
+      opacity: 0;}
+  75% {padding-top: 0%;
+    transform: scale(1.3);}
+
+  100% {transform: scale(1.0);
+      opacity: 1;}
+}
+.zoomInDonut{
+  -webkit-transition: transform .1s;
+  transition: transform .1s;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+    -webkit-animation-name: zoomInDonut;
+  animation-name: zoomInDonut;
+}
+@keyframes zoomInDonut{
+  0% {transform: scale(0.5);
+      opacity: 0;}
+  75% {transform: scale(1.3);}
+
+  100% {transform: scale(1.0);
+      opacity: 1;}
+}
