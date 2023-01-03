@@ -129,8 +129,8 @@ error_reporting(E_ERROR | E_PARSE);
                         <div class="content" style="text-align: center;">
                              <center>
                             <p align="center" id="pInsta"><b>Suivez ÇA VA SMASHER ! 🍔 puis revenez sur cette page pour participer à notre jeu.</b></p>
-                            <p align="center" onclick="ChangePageRoue()" style="background-color: #FDC400; color: black; border-radius: 30px; width: 60%; padding: 8px;">
-                                <b id="socialMedName"></b>
+                            <p align="center" onclick="shareImage()" style="background-color: #FDC400; color: black; border-radius: 30px; width: 60%; padding: 8px;">
+                                <b id="socialMedName">PARTAGER</b>
                             </p>
                             </center>
                         </div>
@@ -141,95 +141,30 @@ error_reporting(E_ERROR | E_PARSE);
 
 
 
-
-
-<?php
-
-$valueFirst = $_COOKIE['userEntryCVS'];
-
-if(isset($_COOKIE['CycleTHRDyz'])){
-    $cycleTHRDyz = $_COOKIE['CycleTHRDyzON'];
-    $cycleTHRDyz = $cycleTHRDyz + 1;
-    setcookie("CycleTHRDyzON", $cycleTHRDyz, time() + 84600, "/", "like-up.fr");
-}
-else{
-    $CycleRest = $_COOKIE["CycleRestON"];
-    $CycleRest = $CycleRest + 1;
-    setcookie("CycleRestON", $cycleTHRDyz, time() + 84600, "/", "like-up.fr");
-}
-
-
-?>
-
-
 <script type="text/javascript">
-        let CycleTHR = '<?php  echo $_COOKIE["CycleTHRDyz"];?>';
-        let CycleRest = '<?php  echo $_COOKIE["CycleRestON"];?>';
-        let cycleTHRDyz = '<?php  echo $_COOKIE["CycleTHRDyzON"];?>';
 
-        console.log(cycleTHRDyz);
         let socialMedName = document.getElementById('socialMedName'); 
-        <?php if($_COOKIE['CycleTHRDyzON'] == 3){
-                setcookie("CycleTHRDyzON", 0, time() + 84600, "/", "like-up.fr");
-            } ?>
 
-        if(CycleTHR >= 0){
-            CycleTHRDyzON();
-        }
-        else{
-            CycleTHRDyzOFF();
-        }
+        async function shareImage() {
+                        const response = await fetch('img/flayer.png');
+                        const blob = await response.blob();
+                        const filesArray = [
+                            new File(
+                            [blob],
+                            'img/flayer.png',
+                            {
+                                type: "image/png",
+                                lastModified: new Date().getTime()
+                            }
+                        )
+                        ];
+                        const shareData = {
+                            files: filesArray,
+                        };
+                        navigator.share(shareData);
+                        location.replace("pageroue.php");
+                        }   
 
-
-    function CycleTHRDyzON(){
-        if(cycleTHRDyz == 0){
-            socialMedName.innerHTML = "INSTAGRAM";
-        }
-        else if(cycleTHRDyz == 1){
-            socialMedName.innerHTML = "GOOGLE";
-        }
-        else if(cycleTHRDyz == 2){
-            socialMedName.innerHTML = "FACEBOOK";
-        }
-        else{
-            socialMedName.innerHTML = "SNAPCHAT";
-            cycleTHRDyz = 0;
-        }
-    }
-
-    function CycleTHRDyzOFF(){
-        socialMedName.innerHTML = "PARTAGER";
-    }
-
-    function ChangePageRoue() {
-
-        if(cycleTHRDyz == 0){
-            //INSTAGRAM LINK
-            window.open('https://www.instagram.com/cava_smasher/');
-            location.replace("pageroue.php");
-        }
-        else if(cycleTHRDyz == 1){
-            // GOOGLE LINK
-            window.open('https://goo.gl/maps/BAp5wpALiWcciqPa9');
-            location.replace("pageroue.php");
-        }
-        else if(cycleTHRDyz == 2){
-            // FACEBOOK LINK
-            window.open('https://www.facebook.com/profile.php?id=100085553797421');
-            location.replace("pageroue.php");
-        }
-        else if(cycleTHRDyz == 3){
-            // SNAPCHAT LINK
-            window.open('https://t.snapchat.com/yruw5jBR');
-            location.replace("pageroue.php");
-        }
-        else{
-            window.open('#');
-            location.replace("#");
-        }
-        
-            
-        }
 
 
 </script>
